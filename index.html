@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="direction">
+        <a href="demo.html">🔎</a>
+        <a href="index.html">🆕</a>
+    </div>
+    <div class="form1">
+        <form id="myForm">
+            <input class="form-control" type="text" id="nme" name="name" placeholder="Enter your name" oninput="getName(this.value)" required><br>
+            <label id="name">Invalid name</label><br/>
+            <input class="form-control" type="email" id="email" name="email" autocomplete="off" oninput="getEmail(this.value)" id="email"  placeholder="Enter your mail id" id="" required><label id="l2"></label><br/>
+            <label id="mail">Invalid email Id</label><br/>
+            <input class="form-control" type="date" name="date" id="date" onchange="getDate(this.value)" required><label id="l4"></label><br/>
+            <label id="datecheck">Enter the year within 1950 to 2010</label><br/>
+            <input class="form-control" type="text" autocomplete="off" id="no" name="no" id="no" placeholder="Enter your mobile no" oninput="getNumber(this.value)"><label id="l3"></label><br/>
+            <label id="No">Invalid mobile no</label><br/>
+            <select name="gender" class="form-control" onchange="getGender(this.value)" id="gender" required>
+                <option value="none">Select your Gender</option>
+                <option value="female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+            <label id="l5"></label><br/>            
+            <label id="Gender">Select your gender</label><br/>
+            <select name="education" class="form-control" id="educat" onchange="getEducation(this.value)" required >
+                <option value="none" id="education">Select your education</option>
+                <option value="B.E">B.E</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MBA">MBA</option>
+            </select><label id="l10"></label><br/>
+            <label id="Edu">Select your Eductaion</label>
+            <input type="text" class="form-control" id="uname" autocomplete="off" placeholder="Enter your username" oninput="getUname(this.value)"><label id="l6"></label><br/><label id="Uname">Enter another username</label><br/>
+            <input type="password" class="form-control" autocomplete="off" id="pss" name="password" oninput="getPass(this.value)" placeholder="Enter your password"><img id="eye" onclick="Eye()" src="hide.png"/>
+            <input type="text" class="form-control" oninput="getPan(this.value)" autocomplete="off" id="Pan" placeholder="Enter your PAN no" name="pan" required><label id="l8" ></label><br/>
+            <label id="pan">Enter valid pan no</label>
+            <br/>
+            <input type="text" autocomplete="off" placeholder="Enter your occupation" id="occupation">
+            <label>Pick your profile your photo size hould be less than 2MB</label><br/>
+            <div id="imgBox" class="image"><input type="file" id="imageUpload" onchange="getImage(event)" name="image" accept=".jpg, .jpeg, .png" required><label id="image" onclick="document.getElementById('imageUpload').click()">📷 Drop your image</label></div><label id="l9"></label><br/>
+            <label id="sizeDisplay"></label>
+            <br/>
+           <input type="submit" value="submit">
+           
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
